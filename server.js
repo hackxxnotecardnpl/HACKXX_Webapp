@@ -30,13 +30,16 @@ console.log(lan.isImportant("evil", wordDatabase));
 */
 
 var Language = require("./LanguageProcessingFunctions.js");
-var HashMap = require('hashmap');
+var cardSet = new Array();
 
-var cardSet = new HashMap();
+var userInput = "";
+function storeInput(input) {
+	userInput = input;
+}
 //var database = map<word, freq>;
-function defineInput(input) {
+function defineInput() {
 	//Space separated words as our note input
-	var words = input.split(" "); 
+	var words = userInput.split(" "); 
 	words.forEach(function(element) {
 		//Lowercase and trimmed word
 		var term = element.replace(/[.,'"!?\s]/gi, '').toLowerCase();
@@ -52,15 +55,13 @@ function defineInput(input) {
 			//that displays its definition in the corresponding text box.
 			//Highlight text with class="highlight".
 			var startStr = "<div class=\"highlight\" onmouseover=\"showDef(\'";
-			var midStr = "\')\" onmouseout=\"defaultState()\">";
+			var midStr = "\')\" onmouseout=\"default()\">";
 			var endStr = " </div>"; //Included space after element to restore format post-splitting
 			newcontent.innerHTML = startStr + term + midStr + term + endStr;
-			
 			let data = Lan.oxfordLookup(term);
 			data.then(function(result){
-					cardSet.set(term, result);
-			});
-
+					cardSet.push(term + ", " + result;			
+			});	
 		} 
 		if (newcontent.firstChild) {
 			mydiv.appendChild(newcontent.firstChild);
@@ -74,7 +75,7 @@ function showDef(name) {
 	document.getElementById("answerbox").innerHTML = cardSet.get(name);
 }
 //When not hovering, return to default state (informative text box)
-function defaultState() {
+function default() {
 	document.getElementById("textbox").innerHTML = "Hover a highlghted word to see its definition!";
 	document.getElementById("answerbox").innerHTML = "";
 }

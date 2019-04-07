@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
    <head>
-   <title>HACKXX_Webapp</title>
-	<link href="css/default.css" type="text/css" rel="stylesheet">
+    <title>HACKXX_Webapp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
    </head>
     
   <body>
-<div id="container" class="long">
     <div id="left" class="left block long">
     <img class="icon" src="img/Main.png" />
 	<h1 class="white">DefiNote</h1>
@@ -29,12 +34,29 @@
     <div id="right" class="right block long">
         <h3 color="black"> Note Library</h3>
         <h4>  Subject</h4>
-        <textarea rows="4" cols="50">
-            Copy in Your Text.
-        </textarea>
-        <input type="submit" value="Generate Note Card" />
+        <form action="js/functions.js">
+            <input type="text" placeholder="Input Your Notes" />
+            <!--
+            <textarea rows="4" cols="50">
+                Copy in Your Text.
+            </textarea> -->
+            <div class="buttons">
+                <button type="submit" class="green">
+                    <img src="http://particletree.com/examples/buttons/tick.png" alt="" />
+                    Save
+                </button>
+                <a href="#" onclick="return false">
+                    <img src="http:…rticletree.com/examples/buttons/textfield_key.png" alt="" />
+                    Change Password
+                </a>
+                <a href="#" class="red" onclick="return false">
+                    <img src="http://particletree.com/examples/buttons/cross.png" alt="" />
+                    Cancel
+                </a>
+            </div>
+            
+        </form>
     </div>
-</div>
 	  
   </body>
 </html>

@@ -1,47 +1,87 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" class="gr__tien-express-flashcard_herokuapp_com">
-<head>
+<html lang="en">
+   <head>
     <title>Flash Cards</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-  <body data-gr-c-s-loaded="true">
-    <header>
-        <!--
-      <img src="/static/img/logo.png"> -->
-      <h1>Flip for Answer</h1>
-    </header>
-      <!--
-    <section class="namecard">
-      <div class="namecard-hello">
-        <p class="namecard-greeting">Welcome, angelina!</p>
-        <form class="namecard-exit" action="/goodbye" method="POST"><button type="submit"><img src="/static/img/close.svg"></button></form>
-      </div>
-    </section>
-          -->
-    <section class="flashcards">
-      <div class="card card-question">
-          <!--
-        <div class="card-header"></div> -->
-        <h1 class="card-title">notecard</h1>
-        <div id="content">
-          <h2 id="term">Meaning of "Haaratattelu"</h2>
-          <!--p class="hint"><i>It starts with an "I"</i></!--p-->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+   </head>
+<body>
+    <div id="left" class="left block long">
+        <a href="index.html">
+            <div class="box">
+                <img class="icon" src="img/Main.png" />
+                <h1 class="white" style="align-content:center">DefNote</h1>
+            </div>
+        </a>
+        <hr />
+        <div class="box">
+            <img class="smallicon" src="img/home.png" />
+            <span class="white">
+                DefHome
+            </span>
         </div>
-        <div class="card-flip-wrap"><!--a href="6?side=answer"-->
-          <!--img class="card-flip" src="img/flip.svg"-->
+        <br />
+        <div class="box">
+
+            <img class="smallicon" src="img/newfile.png" />
+            <span class="white">
+                New Passage
+            </span>
+        </div>
+        <br />
+        <div class="box">
+            <img class="smallicon" src="img/library.png" />
+            <span class="white">
+                My Library
+            </span>
+        </div>
+        <br />
+        <a href="flashcard2.html">
+            <div class="box">
+                <img class="smallicon" src="img/notecard.png" />
+                <span class="white">
+                    My Notecards
+                </span>
+            </div>
+        </a>
+        <div class="box down">
+
+            <img class="smallicon" src="img/contact.png" />
+
+            <h4 class="white">Contact</h4>
+        </div>
+        <br />
+    </div>
+
+    <header>
+        <h1>Flip for Answer</h1>
+    </header>
+
+    <section class="flashcards">
+        <div class="card card-question">
+            <h1 class="card-title">notecard</h1>
+            <div id="content">
+                <h2 id="term">Meaning of "Haaratattelu"</h2>
+                <!--p class="hint"><i>It starts with an "I"</i></!--p-->
+            </div>
+            <div class="card-flip-wrap">
+                <!--a href="6?side=answer"-->
+                <!--img class="card-flip" src="img/flip.svg"-->
                 <input type="button" id="term" class="btn btn-info" onclick="toFront(id)" value="term" />
                 <!--input type="button" class="btn-group btn-info" onclick="toBack()" value="definition" /-->
             </div>
-        <div class="card-next">
-          <!--a href="/cards"><img src="img/next.svg"></!--a-->
-            <input type="button" id="next" class="btn btn-info" onclick="next()" value="next" />
+            <div class="card-next">
+                <!--a href="/cards"><img src="img/next.svg"></!--a-->
+                <input type="button" id="next" class="btn btn-info" onclick="next()" value="next" />
+            </div>
         </div>
-      </div>
-      <script src="js/flashcard.js"></script>
-        
+        <script src="js/flashcard.js"></script>
+
     </section>
-  </body>
+</body>
 </html>

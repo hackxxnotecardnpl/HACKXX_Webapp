@@ -1,20 +1,7 @@
-{
-    "data": {
-        "title": "Finnish Flashcards",
-            "cards": [
-                {
-                    "question": "What \"nykyinen\" means",
-                    "hint": "Something related to time",
-                    "answer": "Current"
-                },
-                {
-                    "question": "What \"arvosana\" means",
-                    "hint": "About exams and stuffs",
-                    "answer": "Grade"
-                },
+"data" = ["What \"nykyinen\" means, Current", "what \"arvosana\" means, Grade", "What \"hakea\" means, To search", ]
+             
                 {
                     "question": "What \"hakea\" means",
-                    "hint": "Something related to application",
                     "answer": "To search"
                 },
                 {

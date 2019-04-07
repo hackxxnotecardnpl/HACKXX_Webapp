@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HACKXX_Webapp</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+</head>
+
+<body>
+
+    <div id="left" class="left block long">
+        <a href="index.html">
+            <div class="box">
+                <img class="icon" src="img/Main.png" />
+                <h1 class="white" style="align-content:center">DefNote</h1>
+            </div>
+        </a>
+        <hr />
+        <div class="box">
+            <img class="smallicon" src="img/home.png" />
+            <span class="white">
+                DefHome
+            </span>
+        </div>
+        <br />
+        <div class="box">
+
+            <img class="smallicon" src="img/newfile.png" />
+            <span class="white">
+                New Passage
+            </span>
+        </div>
+        <br />
+        <div class="box">
+            <img class="smallicon" src="img/library.png" />
+            <span class="white">
+                My Library
+            </span>
+        </div>
+        <br />
+        <a href="flashcard2.html">
+            <div class="box">
+                <img class="smallicon" src="img/notecard.png" />
+                <span class="white">
+                    My Notecards
+                </span>
+            </div>
+        </a>
+        <div class="box down">
+
+            <img class="smallicon" src="img/contact.png" />
+
+            <h4 class="white">Contact</h4>
+        </div>
+        <br />
+    </div>
+
+
+    <div id="right" class="right block long">
+        <h3 color="black">Your Passage</h3>
+        <h4>  Subject</h4>
+        <div style="width:70%" >
+            <p id="paragraph" class="black">
+                The Visual Studio Code 1.21 release includes a brand new text buffer implementation which is much more performant, both in terms of speed and memory usage. In this blog post, I'd like to tell the story of how we selected and designed the data structures and algorithms that led to those improvements.
+
+                Performance discussions about JavaScript programs usually involve a discussion about how much should be implemented in native code. For the VS Code text buffer, these discussions started more than a year ago. During an in-depth exploration, we found that a C++ implementation of the text buffer could lead to significant memory savings, but we didn't see the performance enhancements we were hoping for. Converting strings between a custom native representation and V8's strings is costly and in our case, compromised any performance gained from implementing text buffer operations in C++. We will discuss this in more detail at the end of this post.
+
+                Not going native, we had to find ways to improve our JavaScript/TypeScript code. Inspiring blog posts like this one from Vyacheslav Egorov show ways to push a JavaScript engine to its limits and squeeze out as much performance as possible. Even without low level engine tricks, it is still possible to improve speed by one or more orders of magnitude by using better suited data structures and faster algorithms.
+            </p>
+            <div class="definition container">
+                <div id="textbox" style="background-color:#eceeee" class="term effect2">
+                    <h1 class="black">
+                       Visual Studio Code
+                    </h1>
+                    <hr style="border-color:#202430"/>
+                </div>
+                <div id="answerbox" class="defi" style="background-color:#eceeee" >
+                    <p class="black">
+                        includes a brand new text buffer implementation which is much more performant, both in terms of speed and memory usage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -3,9 +3,7 @@
 
 ## Inspiration
 
-Looking up terms in an academic article could be tedious. With no fast explaination of terms, students waste time searching for termiologies, and more than often get tired before finishing the whole paper.  We want to help users to have more time for learning and achieving their careers. 
-
->>We believe that women, with their great capability in any academic, have great future in (how to incooprparete women!ahah
+Looking up terms in an academic article can be a tedious and time consuming process. With no on demand explanation of terms students will often have to look up and juggle multiple definitions of certain terms. Students end up spending a large amount of time searching for definitions, whic can be a tedious and tiring process for studying. Our application was designed to create a more streamlined process to help women and men everywhere be able to quickly analyze and read difficult passages.
 
 ## What it does
 We created a web application that allows users to input passages from class, and auto identifies and defines the terms that most needed to be explained using Natural Language Processing API and python wiki package. After processing with our built database, the user could view the text at ease: for terms needed explanation, they would hover their mouse over the word, and the definition would be displayed in the definition box. After reading the text, users could also create a set of notecards by one click. 

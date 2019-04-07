@@ -3,6 +3,7 @@ var helo = 2;
 var dataData = ["question1, answer1", "question2, answer2", "question3, answer3", "question4, answer4"];
 var id = 0;
 
+function randomId() {
     var length = dataData.length;
     id = Math.floor(Math.random() * length);
 }

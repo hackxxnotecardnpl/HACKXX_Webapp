@@ -1,0 +1,14 @@
+telencephalon
+mesencephalon
+midbrain
+prosencephalon
+rhombencephalon
+neural
+diencephalon
+ectoderm
+thalamus
+hypothalamus
+forebrain
+vesicles
+ventricle
+embryonic

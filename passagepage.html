@@ -69,23 +69,21 @@
         </div>
         <div style="width:70%" >
             <script src="LanguageProcessingFunctions.js"></script>
-            <p id="paragraph" onload="defineInput()" class="black">
-                The Visual Studio Code 1.21 release includes a brand new text buffer implementation which is much more performant, both in terms of speed and memory usage. In this blog post, I'd like to tell the story of how we selected and designed the data structures and algorithms that led to those improvements.
+            <p id="paragraph" onload="defineInput()" class="black" style="font-size:160%">
+                The diencephalon is a division of the forebrain (embryonic prosencephalon), and is situated between the telencephalon and the midbrain (embryonic mesencephalon). It consists of structures that are on either side of the third ventricle, including the thalamus, the hypothalamus, the epithalamus and the subthalamus.
 
-                Performance discussions about JavaScript programs usually involve a discussion about how much should be implemented in native code. For the VS Code text buffer, these discussions started more than a year ago. During an in-depth exploration, we found that a C++ implementation of the text buffer could lead to significant memory savings, but we didn't see the performance enhancements we were hoping for. Converting strings between a custom native representation and V8's strings is costly and in our case, compromised any performance gained from implementing text buffer operations in C++. We will discuss this in more detail at the end of this post.
-
-                Not going native, we had to find ways to improve our JavaScript/TypeScript code. Inspiring blog posts like this one from Vyacheslav Egorov show ways to push a JavaScript engine to its limits and squeeze out as much performance as possible. Even without low level engine tricks, it is still possible to improve speed by one or more orders of magnitude by using better suited data structures and faster algorithms.
+                The diencephalon is one of the main vesicles of the brain formed during embryogenesis. During the third week of development a neural tube is created from the ectoderm, one of the three primary germ layers. The tube forms three main vesicles during the third week of development: the prosencephalon, the mesencephalon and the rhombencephalon. The prosencephlon gradually divides into the telencephalon and the diencephalon.
             </p>
             <div class="definition container">
                 <div id="textbox" style="background-color:#eceeee" class="term effect2">
                     <h1 class="black">
-                       Visual Studio Code
+                       Diencephalon
                     </h1>
                     <hr style="border-color:#202430"/>
                 </div>
                 <div id="answerbox" class="defi" style="background-color:#eceeee" >
                     <p class="black">
-                        includes a brand new text buffer implementation which is much more performant, both in terms of speed and memory usage.
+                        The caudal (posterior) part of the forebrain, containing the epithalamus, thalamus, hypothalamus, and ventral thalamus and the third ventricle.
                     </p>
                 </div>
             </div>

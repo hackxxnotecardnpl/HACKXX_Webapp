@@ -10,78 +10,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
    </head>
-<body>
-    <div id="left" class="left block long">
-        <a href="index.html">
-            <div class="box">
-                <img class="icon" src="img/Main.png" />
-                <h1 class="white" style="align-content:center">DefNote</h1>
-            </div>
-        </a>
-        <hr />
-        <div class="box">
-            <img class="smallicon" src="img/home.png" />
-            <span class="white">
-                DefHome
-            </span>
-        </div>
-        <br />
-        <div class="box">
+   <body>
+       <div id="left" class="left block long">
+           <a href="index.html">
+               <div class="box">
+                   <img class="icon" src="img/Main.png" />
+                   <h1 class="white" style="align-content:center">DefNote</h1>
+               </div>
+           </a>
+           <hr />
+           <div class="box">
+               <img class="smallicon" src="img/home.png" />
+               <span class="white">
+                   DefHome
+               </span>
+           </div>
+           <br />
+           <div class="box">
 
-            <img class="smallicon" src="img/newfile.png" />
-            <span class="white">
-                New Passage
-            </span>
-        </div>
-        <br />
-        <div class="box">
-            <img class="smallicon" src="img/library.png" />
-            <span class="white">
-                My Library
-            </span>
-        </div>
-        <br />
-        <a href="flashcard2.html">
-            <div class="box">
-                <img class="smallicon" src="img/notecard.png" />
-                <span class="white">
-                    My Notecards
-                </span>
-            </div>
-        </a>
-        <div class="box down">
+               <img class="smallicon" src="img/newfile.png" />
+               <span class="white">
+                   New Passage
+               </span>
+           </div>
+           <br />
+           <div class="box">
+               <img class="smallicon" src="img/library.png" />
+               <span class="white">
+                   My Library
+               </span>
+           </div>
+           <br />
+           <a href="flashcard2.html">
+               <div class="box">
+                   <img class="smallicon" src="img/notecard.png" />
+                   <span class="white">
+                       My Notecards
+                   </span>
+               </div>
+           </a>
+           <div class="box down">
 
-            <img class="smallicon" src="img/contact.png" />
+               <img class="smallicon" src="img/contact.png" />
 
-            <h4 class="white">Contact</h4>
-        </div>
-        <br />
-    </div>
+               <h4 class="white">Contact</h4>
+           </div>
+           <br />
+       </div>
 
-    <header>
-        <h1>Flip for Answer</h1>
-    </header>
+       <div id="right" class="right block long">
+           <h3 color="black" style="margin-top:8px">Flip for Answer</h3>
+           <h4 style="font-weight:200">  --  --  Review terminologies through noteCards! -- -- </h4>
+           <hr style="border-color:#242144" />
+       </div>
+       <section class="flashcards">
 
-    <section class="flashcards">
-        <div class="card card-question">
-            <h1 class="card-title">notecard</h1>
-            <div id="content">
-                <h2 id="term">Meaning of "Haaratattelu"</h2>
-                <!--p class="hint"><i>It starts with an "I"</i></!--p-->
-            </div>
-            <div class="card-flip-wrap">
-                <!--a href="6?side=answer"-->
-                <!--img class="card-flip" src="img/flip.svg"-->
-                <input type="button" id="term" class="btn btn-info" onclick="toFront(id)" value="term" />
-                <!--input type="button" class="btn-group btn-info" onclick="toBack()" value="definition" /-->
-            </div>
-            <div class="card-next">
-                <!--a href="/cards"><img src="img/next.svg"></!--a-->
-                <input type="button" id="next" class="btn btn-info" onclick="next()" value="next" />
-            </div>
-        </div>
-        <script src="js/flashcard.js"></script>
+           <div class="card card-question">
+               <h1 class="card-title">notecard</h1>
+               <div id="content">
+                   <h2 id="term">"Question: Press Next      to Start!"</h2>
+                   <!--p class="hint"><i>It starts with an "I"</i></!--p-->
+               </div>
+               <div class="card-flip-wrap">
+                   <!--a href="6?side=answer"-->
+                   <!--img class="card-flip" src="img/flip.svg"-->
+                   <input type="button" id="term" class="btn btn-info" onclick="toFront()" value="FLIP" />
+                   <!--input type="button" class="btn-group btn-info" onclick="toBack()" value="definition" /-->
+               </div>
+               <div class="card-next">
+                   <!--a href="/cards"><img src="img/next.svg"></!--a-->
+                   <input type="button" id="next" class="btn btn-info" onclick="next()" value="NEXT" />
+               </div>
+           </div>
+           <script src="js/flashcard.js"></script>
 
-    </section>
-</body>
+       </section>
+   </body>
 </html>

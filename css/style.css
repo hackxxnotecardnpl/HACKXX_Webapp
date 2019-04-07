@@ -5,6 +5,12 @@
     height: 50%;
 }*/
 
+.largeicon {
+    float: left;
+    width: 500px;
+    
+}
+
 .formTable {
     border-color: black;
 }
@@ -292,8 +298,8 @@ button {
 }
 
 input {
-    width: 50%;
-    height: 30px;
+    /*width: 50%;
+    height: 30px;*/
     font-size: 1em;
     text-align: center;
     border: 0;
@@ -410,8 +416,8 @@ input {
 
 /* Flash Cards */
 .flashcards {
-    position: absolute;
-    top: 100px; /*CHANGE HERE FOR UP AND DOWN!!*/
+    position: fixed;
+    top: 200px; /*CHANGE HERE FOR UP AND DOWN!!*/
     right: 0;
     left: 0;
     bottom: 0;
@@ -440,12 +446,12 @@ input {
 
 .card-title {
     text-align: center;
-    border-top: 2px solid #F5F3ED;
+    /*border-top: 2px solid #F5F3ED;*/
     border-bottom: 2px solid rgba(0,0,0,.05);
     color: #727C85;
     padding: 10px;
     letter-spacing: 5px;
-    background-color: #F5F3ED;
+    /*background-color: #F5F3ED;*/
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 400;
@@ -504,7 +510,7 @@ input {
 
 .card-flip-wrap {
     position: absolute;
-    bottom: 10px;
+    bottom: 25px;
     left: 20px;
     padding-left: 500px:
 }

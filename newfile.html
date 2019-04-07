@@ -73,14 +73,13 @@
                 <hr style="border-color:#242144" />
                 <button class="btn btn-light" type="submit" onclick="storeInput(document.getElementById(\" exampleFormControlTextarea1\")"> Analyze Your Text</button>
                 <button class="btn btn-light" onclick="location.href='passagepage.html'"> Goto TextPage </button>
-                <p id="demo">demo</p>
+                <!--p id="demo">demo</!-->
             </form>
         </div>
         <script>
             var text = "";
             function funct() {
                 
-                //alert("started func()");
                 text = document.getElementById("exampleFormControlTextarea1").value;
                 //alert(text);
                 document.getElementById("demo").innerHTML = text;

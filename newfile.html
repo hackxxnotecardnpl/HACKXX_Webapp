@@ -71,7 +71,7 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" placeholder="Paste your article here." type="text"></textarea>
                 <hr style="border-color:#242144" />
                 <button class="btn btn-light" type="submit" onclick="funct()"> Analyze Your Text</button>
-                <!--button class="btn btn-light" type="submit" onclick=""> Goto TextPage </!--button-->
+                <button class="btn btn-light" onclick="location.href='passagepage.html'"> Goto TextPage </button>
                 <p id="demo">demo</p>
             </form>
         </div>
@@ -79,9 +79,9 @@
             var text = "";
             function funct() {
                 
-                alert("started func()");
+                //alert("started func()");
                 text = document.getElementById("exampleFormControlTextarea1").value;
-                alert(text);
+                //alert(text);
                 document.getElementById("demo").innerHTML = text;
                 
             }

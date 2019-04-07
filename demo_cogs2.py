@@ -1,3 +1,4 @@
+# tester
 import nltk
 import re
 from nltk.corpus import stopwords 
@@ -6,13 +7,19 @@ import nltk.data
 import wikipedia
 from nltk.corpus import wordnet
 
-# put the item in a but not in b into a file
-def compareDataBase(wordCount_1,wordCount_2):
-	special_for_1 = {}
-	for word in wordCount_1:
-		if word not in wordCount_2:
-			special_for_1.update({word : wordCount_1[word]})
-	return special_for_1
+
+
+
+
+
+
+
+
+def readWord(content):
+	wordList = []
+	wordList = content.split('\n')
+	return wordList
+
 
 
 def generate(path,fileName):
@@ -67,7 +74,6 @@ def printWord(wordCount):
 		output += '\n'
 	return output
 
-
 def validWord(content):
 
 	content = content.lower()
@@ -91,8 +97,7 @@ def validWord(content):
 		else:
 			wordCount.update({word : 1})
 
-	return wordCount	
-
+	return wordCount
 def isEnglish(word):
 	if not wordnet.synsets(word):
 		return False
@@ -124,38 +129,26 @@ def intoSentence(content):
 			sentences.append(sentence)
 	return sentences
 
+cogs2_file = open('cogs2.txt', 'r')
+cogs2 = cogs2_file.read()
 
-def askDefinition(term):
-	page = wikipedia.page(term)
+bio_file = open('finalData.txt','r')
+bio = bio_file.read()
 
-	#print('the URL is ' + page.url)
-	#print('the first relevant link is  ' + page.links[0])
+cogs2_word = validWord(cogs2)
 
-	definition = ''
+database_word = readWord(bio)
 
-	# loop through to get the first paragraph of content
-	for char in page.content:
-		definition += char
-		if(char == '\n'):
-			break
+matchWord = []
 
-	#print(definition)
-	return definition
-	#return page.content
+for word in cogs2_word:
+	if word in database_word:
+		matchWord.append(word)
 
-file_bio = open('Database/bigBio.txt','r')
-content_bio = file_bio.read()
+output = ''
 
-file_novel = open('Database/Books/all.txt','r')
-content_novel = file_novel.read()
+for word in matchWord:
+	output += word
+	output += '\n'
 
-output = compareContent(content_bio,content_novel)
-
-generateFile(output,'finalData.txt')
-
-
-
-
-
-
-
+generateFile(output, 'matchResult.txt')

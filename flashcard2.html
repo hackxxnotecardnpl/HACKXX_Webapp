@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" class="gr__tien-express-flashcard_herokuapp_com">
+<head>
+    <title>Flash Cards</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+  <body data-gr-c-s-loaded="true">
+    <header>
+        <!--
+      <img src="/static/img/logo.png"> -->
+      <h1>Flip for Answer</h1>
+    </header>
+      <!--
+    <section class="namecard">
+      <div class="namecard-hello">
+        <p class="namecard-greeting">Welcome, angelina!</p>
+        <form class="namecard-exit" action="/goodbye" method="POST"><button type="submit"><img src="/static/img/close.svg"></button></form>
+      </div>
+    </section>
+          -->
+    <section class="flashcards">
+      <div class="card card-question">
+          <!--
+        <div class="card-header"></div> -->
+        <h1 class="card-title">notecard</h1>
+        <div id="content">
+          <h2>Meaning of "Haaratattelu"</h2>
+          <p class="hint"><i>It starts with an "I"</i></p>
+        </div>
+        <div class="card-flip-wrap"><a href="6?side=answer"><img class="card-flip" src="img/flip.svg"></a></div>
+        <div class="card-next"><a href="/cards"><img src="img/next.svg"></a></div>
+      </div>
+      <script src="js/flashcard.js"></script>
+    </section>
+  </body>
+</html>

@@ -4,9 +4,15 @@ from nltk.corpus import stopwords
 import math
 import nltk.data
 import wikipedia
+from nltk.corpus import wordnet
 
-
-
+# put the item in a but not in b into a file
+def compareDataBase(wordCount_1,wordCount_2):
+	special_for_1 = {}
+	for word in wordCount_1:
+		if word not in wordCount_2:
+			special_for_1.update({word : wordCount_1[word]})
+	return special_for_1
 
 
 def generate(path,fileName):
@@ -48,7 +54,8 @@ def validWord(content):
 	for word in word_list:
 		if word not in stop_words:
 			if word != '' and word.isalpha():
-				final_tokens.append(word)
+				if isEnglish(word):
+					final_tokens.append(word)
 
 	wordCount = {}
 
@@ -60,6 +67,11 @@ def validWord(content):
 
 	return wordCount	
 
+def isEnglish(word):
+	if not wordnet.synsets(word):
+		return False
+	else:
+		return True
 
 def removeDelimiter(content):
 	new_content = ''
@@ -107,4 +119,22 @@ def askDefinition(term):
 
 
 
-generate('Physics.txt','physicsWord.txt')
+#generate('Physics.txt','physicsWord.txt')
+file_bio = open('Neuroscience.txt', 'r')
+content_bio = file_bio.read()
+
+file_phy = open('Physics.txt', 'r')
+content_phy = file_phy.read()
+
+
+wordCount_bio = validWord(content_bio)
+wordCount_phy = validWord(content_phy)
+
+bio_special = compareDataBase(wordCount_bio, wordCount_phy)
+
+sepcial_for_bio = open('bio_special_word.txt', "w")
+
+content = printWordCount(bio_special)
+sepcial_for_bio.write(content)
+
+sepcial_for_bio.close()

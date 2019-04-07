@@ -1,32 +1,29 @@
-## Welcome to GitHub Pages
+# HackXX 2018
 
-You can use the [editor on GitHub](https://github.com/hackxxnotecardnpl/HACKXX_Webapp/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A webapp that allow user to input a notes for one class and auto generate note card using NLP and webscraping
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Inspiration
 
-### Markdown
+MThis is our inspiration for the app
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## What this web app does
+- one 
+- two
 
-```markdown
-Syntax highlighted code block
+### Techniques we use
 
-# Header 1
-## Header 2
-### Header 3
+- one
+- two
+- three
 
+
+### Accomplishments
 - Bulleted
 - List
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Challenges
+- lala
+- 
 
 ### Jekyll Themes
 

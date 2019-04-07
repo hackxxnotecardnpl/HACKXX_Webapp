@@ -1,6 +1,17 @@
 ﻿
 /*main body set.*/
+html {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    width: 100%;
+}
+
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     background: #FFFFEE;
@@ -32,7 +43,7 @@ div.long {
     overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-shrink: 0;
 }
 
@@ -41,13 +52,15 @@ div.long {
 h1.white {
     font-variant: small-caps;
     color: aliceblue;
-    font-size: 250%;
+    font-size: 230%;
+    display: inline-block;
 }
 
 
 h3.white {
     font-variant: small-caps;
     color: aliceblue;
+    font-size: 150%;
 }
 
 h4.white {
@@ -63,8 +76,9 @@ p.white {
 /*Down have right side stuff. */
 
 #right {
-    float: right;
-    width: auto;
+    //float: right;
+    width: 100%;
+    margin-left: 300px;
 }
 
 #center {

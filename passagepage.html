@@ -68,7 +68,8 @@
             <hr style="border-color:#242144" />
         </div>
         <div style="width:70%" >
-            <p id="paragraph" class="black">
+            <script src="LanguageProcessingFunctions.js"></script>
+            <p id="paragraph" onload="defineInput()" class="black">
                 The Visual Studio Code 1.21 release includes a brand new text buffer implementation which is much more performant, both in terms of speed and memory usage. In this blog post, I'd like to tell the story of how we selected and designed the data structures and algorithms that led to those improvements.
 
                 Performance discussions about JavaScript programs usually involve a discussion about how much should be implemented in native code. For the VS Code text buffer, these discussions started more than a year ago. During an in-depth exploration, we found that a C++ implementation of the text buffer could lead to significant memory savings, but we didn't see the performance enhancements we were hoping for. Converting strings between a custom native representation and V8's strings is costly and in our case, compromised any performance gained from implementing text buffer operations in C++. We will discuss this in more detail at the end of this post.

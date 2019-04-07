@@ -1,43 +1,26 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
+var flag = 1;
+var helo = 2;
+var dataData = ["question1, answer1", "question2, answer2", "question3, answer3", "question4, answer4"];
+var id = 0;
 
-const app = express();
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use("/static", express.static("public"));
-
-app.set("view engine", "pug");
-
-const mainRoutes = require("../routes");
-const cardRoutes = require("../routes/cards");
-
-app.use(mainRoutes);
-app.use("/cards", cardRoutes);
-
-app.use((req, res, next) => {
-    const err = new Error("Not Found");
-    err.status = 404;
-    next(err);
-})
-
-if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
-        res.status(err.status || 500);
-        res.render('error', {
-            message: err.message,
-            error: err
-        });
-    });
+    var length = dataData.length;
+    id = Math.floor(Math.random() * length);
 }
 
-app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: {}
-    });
-});
+function next() {
+    randomId();
+    flag = 0;
+    toFront();
+}
 
-app.listen(process.env.PORT || 3000);
+function toFront() {
+    if (flag === 1) {
+        var answer = dataData[id].split(", ")[1];
+        document.getElementById('term').innerHTML = "Answer: " + answer;
+        flag = 0;
+    } else {
+        var question = dataData[id].split(", ")[0];
+        document.getElementById('term').innerHTML = "Question: " + question;
+        flag = 1;
+    }
+}

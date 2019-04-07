@@ -27,13 +27,21 @@
         <div class="card-header"></div> -->
         <h1 class="card-title">notecard</h1>
         <div id="content">
-          <h2>Meaning of "Haaratattelu"</h2>
-          <p class="hint"><i>It starts with an "I"</i></p>
+          <h2 id="term">Meaning of "Haaratattelu"</h2>
+          <!--p class="hint"><i>It starts with an "I"</i></!--p-->
         </div>
-        <div class="card-flip-wrap"><a href="6?side=answer"><img class="card-flip" src="img/flip.svg"></a></div>
-        <div class="card-next"><a href="/cards"><img src="img/next.svg"></a></div>
+        <div class="card-flip-wrap"><!--a href="6?side=answer"-->
+          <!--img class="card-flip" src="img/flip.svg"-->
+                <input type="button" id="term" class="btn btn-info" onclick="toFront(id)" value="term" />
+                <!--input type="button" class="btn-group btn-info" onclick="toBack()" value="definition" /-->
+            </div>
+        <div class="card-next">
+          <!--a href="/cards"><img src="img/next.svg"></!--a-->
+            <input type="button" id="next" class="btn btn-info" onclick="next()" value="next" />
+        </div>
       </div>
       <script src="js/flashcard.js"></script>
+        
     </section>
   </body>
 </html>

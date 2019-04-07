@@ -33,11 +33,11 @@ We learned, machine learning for Natural Language Processing, Node.js, and html.
 Our original idea was to have this application be able to convert handwritten notes and text files into flashcards. What we ended up doing an application that could be trained to highlight and define certain words that were deemed important and define them using oxford api. Ideally in the future the input we expanded to accept handwritten notes and powerpoints, that would then be converted into flashcards with online or custom definitions. 
 
 ## Built With
-Python
-Html
-Node.js
-Sublime text
-oxford api
+Python  
+Html  
+Node.js  
+Sublime text  
+oxford api  
 
 ## Detailed description of files
 #### Neuralscience.txt and Physics.txt are txt file of textbooks

@@ -66,10 +66,26 @@
             <h4 style="font-weight:200">  --  --  We will define the most explanation needed terms for you -- -- </h4>
             <hr style="border-color:#242144"/>
         </div>
-            <div class="form-group">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="20"></textarea>
-
+        <div class="form-group">
+            <form id="confirmationForm" name="confirmationForm1" method="post" onsubmit="return false">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" placeholder="Paste your article here." type="text"></textarea>
+                <hr style="border-color:#242144" />
+                <button class="btn btn-light" type="submit" onclick="funct()"> Analyze Your Text</button>
+                <!--button class="btn btn-light" type="submit" onclick=""> Goto TextPage </!--button-->
+                <p id="demo">demo</p>
+            </form>
         </div>
+        <script>
+            var text = "";
+            function funct() {
+                
+                alert("started func()");
+                text = document.getElementById("exampleFormControlTextarea1").value;
+                alert(text);
+                document.getElementById("demo").innerHTML = text;
+                
+            }
+        </script>
     </div>
 
 </body>

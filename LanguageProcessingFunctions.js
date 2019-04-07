@@ -89,22 +89,17 @@ function test (phrase, frequencyDatabase){
 	}
 }
 
-function define(word) {
-
-}
-
 function oxfordLookup(word) {
 	var lookup = dict.find(word);
  	var definition;
 	lookup.then(function(res) {
 		var temp = JSON.parse(JSON.stringify(res, null, 4))
-		console.log(temp.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0])
-
+		definition = temp.results[0].lexicalEntries[0].entries[0].senses[0].definitions[0]
 	},
 		function(err) {
 		console.log(err);
 	});
-
+	return definition;
 }
 
 var frequencyDatabase = new HashMap();
@@ -118,4 +113,8 @@ console.log(frequencyDatabase);
 console.log(isFrequentlyUsed("evil", frequencyDatabase));
 
 test("I hate evil people.",frequencyDatabase);
-oxfordLookup("yes");
+
+let data = oxfordLookup("yes")
+data.then(function(result){
+	console.log(result)
+})

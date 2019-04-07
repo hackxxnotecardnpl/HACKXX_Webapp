@@ -4,18 +4,23 @@
 /*.emptyblock{
     height: 50%;
 }*/
-.box2 h3 {
-    text-align: center;
-    position: relative;
-    top: 80px;
+
+.formTable {
+    border-color: black;
 }
 
-.box2 {
-    width: 70%;
-    height: 200px;
-    background: #FFF;
-    margin: 40px auto;
-}
+    .formTable td {
+        padding: 10px;
+    }
+
+    .formTable .col1 {
+        text-align: right;
+    }
+
+    .formTable .col2 {
+        width: 100%;
+    }
+
 .effect2 {
     position: relative;
 }
